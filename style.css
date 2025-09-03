@@ -16,7 +16,9 @@ body {
 }
 
 .header-img-container {
+    
     background: linear-gradient(to bottom, #f1bd77, #d98538);
+    pointer-events: auto;
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -33,16 +35,11 @@ body {
     max-width: 100vw;
     max-height: 100vh;
     object-fit: cover;
-    pointer-events: none;
     display: block;
 }
 
-.scallop {
-    z-index: 1;
-    opacity: 1;
-}
 
-.trim {
+.scalloptrim {
     position: absolute;
     top: 0;
     left: 50%;
@@ -56,24 +53,36 @@ body {
 }
 
 .sesame_dog {
-    position: absolute;
-    width: 100vw;
-    height: 100vh; 
-    top: 100%;
+    pointer-events: auto;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 110vw;
+    height: auto;
     z-index: 3;
+    transition: transform 0.2s ease;
 }
 
+  .sesame_dog:hover {
+          transform: translateX(-50%) scale(1.08);
+      }
+
 .get_started_button {
-    position: absolute;
+    pointer-events: auto;
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
     width: 100vw;
-    height: 100vh;
-    z-index: 5;
+    height: auto;
+    z-index: 10;
     transition: transform 0.2s ease;
-    cursor: grabbing;
+    cursor: pointer;
 }
 
 .get_started_button:hover {
-    transform: scale(1.08);
+     filter: brightness(0.85);
 }
 
 .header-img {
