@@ -36,3 +36,11 @@ startBtn.addEventListener("click", startTimer);
 resetBtn.addEventListener("click", resetTimer);
 
 updateDisplay(); // initialize
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.fall-in').forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, 200 * i); // stagger effect
+  });
+});
